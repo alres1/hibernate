@@ -29,6 +29,6 @@ public class Person {
     @Column
     private String phone_number;
 
-    @Column
-    private String city_of_living;
+    @Column(name = "city_of_living")
+    private String city;
 }

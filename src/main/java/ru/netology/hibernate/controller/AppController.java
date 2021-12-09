@@ -19,4 +19,16 @@ public class AppController {
     public List<Person> getPersonsByCity(@RequestParam String city) {
         return appRepository.getPersonsByCity(city);
     }
+
+    @GetMapping("/persons/by-age")
+    public List<Person> getPersonsByAge(@RequestParam int age) {
+        return appRepository.getPersonsByAge(age);
+    }
+
+    @GetMapping("/person")
+    public Person getPersonsByAge(@RequestParam String name, String surname) {
+        return appRepository.getPersonsByNameAndSurname(name, surname);
+    }
+
+
 }
